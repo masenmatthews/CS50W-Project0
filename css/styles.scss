@@ -1,0 +1,102 @@
+$color: blue;
+
+body {
+    background-image: url('../images/background.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+table {
+    color: $color;
+    
+    th, tr {
+        font-family: monospace;
+    }
+    
+    td {
+        margin: 0 auto;
+        border: 1px solid black;
+        border-spacing: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+#home-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+        max-width: 325px;
+        min-width: 325px;
+        max-height: 310px;
+        min-height: 310px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.navbar {
+    font-size: 1.25em;
+}
+
+#home-head {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    font-weight: bold;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h3 {
+    color: red;
+}
+
+%animal-summary {
+    background: rgba(170, 170, 170, 0.835);
+    font-size: 1.25em;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+.bear-summary {
+    @extend %animal-summary;
+    color: blue;
+}
+
+.elephant-summary {
+    @extend %animal-summary;
+    color: green;
+}
+
+.giraffe-summary {
+    @extend %animal-summary;
+    color: red;
+}
+
+.whale-summary {
+    @extend %animal-summary;
+    color: purple;
+}
+
+@media (max-width: 870px) {
+    h1 {
+        color: red;
+    }
+}
+
+@media (min-width: 570px) {
+    h1 {
+        color: $color;
+    }
+}
